@@ -1,0 +1,376 @@
+/* Global */
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+ul{
+  margin:0;
+  padding:0;
+}
+
+
+
+
+.button_1{
+  height:38px;
+  background:#ad0c0c;
+  border:0;
+  padding-left: 20px;
+  padding-right:20px;
+  color:#ffffff;
+}
+
+.dark{
+  padding:15px;
+  background:#000000;
+  color:#ffffff;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+/* Header **/
+header{
+  display: flex;
+  background:#000000;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:#ad0c0c 3px solid;
+}
+
+.nav-list{
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+
+
+header a{
+  color:#ffffff;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .highlight, header .current a{
+  color:#ad0c0c;
+  font-weight:bold;
+}
+header a:active{
+  color:#ad0c0c;
+
+}
+
+header a:hover{
+  color:#cccccc;
+  font-weight:bold;
+}
+
+/* Showcase */
+#showcase{
+  background-repeat: no-repeat;
+  text-align:center;
+  color:#ffffff;
+  height: 600px;
+  background-image:url(../Imagenes/E2.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#showcase h1{
+  margin-top:100px;
+  font-size:55px;
+  margin-bottom:10px;
+  text-shadow: 2px 2px black;
+}
+
+#showcase p{
+  font-size:20px;
+  text-shadow: 2px 2px black;
+}
+
+/* Newsletter */
+
+#newsletter{
+  padding:15px;
+  color:#ffffff;
+  background:#000000
+  
+}
+
+#newsletter h1{
+  float:left;
+text-shadow: 2px 2px black;
+}
+
+#newsletter form {
+  float:right;
+  margin-top:15px;
+}
+
+#newsletter input[type="email"]{
+  padding:4px;
+  height:25px;
+  width:250px;
+}
+
+/* Boxes */
+
+#cajas{
+  margin-top:20px;
+  background:#000000;
+}
+
+#cajas h2{
+  color:#ad0c0c;
+}
+
+#cajas p{
+  color:white;
+}
+
+
+
+#boxes{
+  margin-top:20px;
+  background:#000000;
+}
+
+#boxes1{
+  margin-top:20px;
+}
+
+#boxes1 .box1{
+  float:left;
+  text-align: center;
+  color:black;
+  width:30%;
+  padding:10px;
+  margin-top:6px;  
+}
+
+#boxes1 .box1 h3{
+  color:#000000;
+}
+
+#boxes1 .box1 img{
+  width:90px;
+  border: 1px solid black;
+}
+
+#boxes .box{
+  float:left;
+  text-align: center;
+  color:white;
+  width:30%;
+  padding:10px;
+  margin-top:6px;  
+}
+
+#boxes .box h3{
+  color:#ad0c0c;
+}
+
+#boxes .box img{
+  width:90px;
+  border: 1px solid black;
+}
+
+/* Vinculos */
+a {
+    color: #ad0c0c;
+    text-decoration:none
+}
+
+/* Footer */
+
+footer{
+  padding: 20px;
+  margin-top: 20px;
+  color:#ffffff;
+  background-color: #ad0c0c;
+  text-align: center;
+}
+
+
+
+
+
+
+#contacto {
+  background-color: #ad0c0c;
+  padding: 10px; 
+  max-width: 400px; 
+  margin: 0 auto; 
+}
+
+.form-group {
+  margin-bottom: 10px; 
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 14px; 
+}
+
+input[type="text"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px; 
+}
+
+textarea {
+  height: 100px; 
+}
+
+button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 14px; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+body{
+  font: 15px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+}
+
+.abrir-menu{
+  display: none;
+}
+.cerrar{
+  display: none;
+}
+
+
+@media screen and (max-width:950px ) {
+  .abrir-menu,
+  .cerrar{
+    display: block;
+    border:0 ;
+    font-size: 1.25rem;
+    background-color:transparent;
+    cursor: pointer;
+
+  }
+  .abrir-menu{
+    color: #000000;
+    
+  }
+  .abrir-menu{
+    color: white;
+    
+  }
+  .nav{
+    opacity: 0 ;
+    visibility: hidden;
+
+  }
+
+
+
+.nav{
+display: flex;
+flex-direction: column;
+align-items: end;
+gap: 1rem;
+position: absolute;
+top: 0;
+right: 0;
+background-color: #000000;
+padding:2rem;
+box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+}
+
+.nav.visible {
+  opacity: 1;
+  visibility:visible;
+
+}
+
+.nav-list{
+  flex-direction: column;
+  align-items: end;
+}
+.nav-list li a {
+  color: #ececec;
+}
+
+header .highlight, header .current a{
+  color:#ad0c0c;
+  font-weight:bold;
+}
+header a:active{
+  color:#ad0c0c;
+
+}
+#boxes .box {
+  width: 100%;
+  margin: 0;
+}
+
+/* Alinea el texto de las boxes al centro */
+#boxes .box p {
+  text-align: center;
+}
+
+/* Aumenta el tamaño de fuente de los títulos y párrafos en las boxes */
+#boxes .box h3,
+#boxes .box p {
+  font-size: 18px;
+}
+
+/* Alinea el texto de los párrafos en el showcase al centro */
+#showcase p {
+  text-align: center;
+}
+#showcase {
+  background-image: url(../Imagenes/iphone.png); 
+  background-size: cover; 
+  background-position: center center;
+}
+
+/* Alinea el texto del título y el párrafo en el centro */
+#showcase h1, #showcase p {
+  text-align: center;
+}
+}
+
+
