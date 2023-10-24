@@ -1,82 +1,66 @@
-window.onload = init;
+const nav = document.querySelector("#nav");
+const abrir = document.querySelector("#abrir");
+const cerrar = document.querySelector("#cerrar")
 
-function init() {
-    var form = document.getElementById("form");
-    form.addEventListener("submit", validarFormulario);
-
-}
-
-function init() {
-    var formExcursiones = document.getElementById("form");
-    formExcursiones.addEventListener("submit", validarFormulario);
-
-}
-
-function init() {
-    var formDistritos = document.getElementById("form");
-    formDistritos.addEventListener("submit", validarFormulario);
-
-}
-
-function init() {
-    var formHoteles = document.getElementById("form");
-    formHoteles.addEventListener("submit", validarFormulario);
-
-}
-
-function init() {
-    var formTransporte = document.getElementById("form");
-    formTransporte.addEventListener("submit", validarFormulario);
-
-}
-
-
-
-
-
-
-
-
-function validarFormulario(e){
-    e.preventDefault();
-    alert("Formulario enviado");
-
-}
-
-
-
-
-
-
-
-
-
-const form = document.getElementById("form");
-form.addEventListener ("submit", function(e){
-    const fullname = document.getElementById("mail").value
-    console.log("fullname", fullname)
+abrir.addEventListener("click", () => {
+    nav.classList.add("visible");
 })
 
-const formExcursiones = document.getElementById("form-excursiones");
-formExcursiones.addEventListener ("submit", function(e){
-    const fullname = document.getElementById("mail-excursiones").value
-    console.log("fullname", fullname)
+cerrar.addEventListener("click", () => {
+    nav.classList.remove("visible");
 })
 
-const formDistritos = document.getElementById("form-distritos");
-formDistritos.addEventListener ("submit", function(e){
-    const fullname = document.getElementById("mail-distritos").value
-    console.log("fullname", fullname)
-})
 
-const formHoteles = document.getElementById("form-hoteles");
-formHoteles.addEventListener ("submit", function(e){
-    const fullname = document.getElementById("mail-hoteles").value
-    console.log("fullname", fullname)
-})
+window.onload = function() {
+    init("form");
+};
 
-const formTransporte = document.getElementById("form-transporte");
-formTransporte.addEventListener ("submit", function(e){
-    const fullname = document.getElementById("mail-transporte").value
-    console.log("fullname", fullname)
-})
+function init(formId) {
+    var form = document.getElementById(formId);
+    console.log(formId);
+
+    form.addEventListener("submit", function(e) {
+        var email = document.getElementById("mail").value;
+        
+        if (email.trim() === '') {
+            alert('Por favor, ingresa una dirección de correo electrónico.');
+            e.preventDefault(); // Evitar el envío del formulario
+        } else {
+            alert("Formulario enviado");
+        }
+    });
+}
+
+
+
+
+var formContacto = document.getElementById("form-contacto");
+
+// Agrega un evento "submit" al formulario
+formContacto.addEventListener("submit", function(e) {
+    //e.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
+    // Aquí puedes realizar acciones o validaciones cuando se envía el formulario
+
+    // Obtiene los valores de los campos del formulario
+    var nombre = document.getElementById("nombre").value;
+    var telefono = document.getElementById("telefono").value;
+    var direccion = document.getElementById("direccion").value;
+    var mensaje = document.getElementById("mensaje").value;
+
+    // Aquí puedes procesar o guardar estos valores
+    console.log("Nombre: " + nombre);
+    console.log("Teléfono: " + telefono);
+    console.log("Dirección: " + direccion);
+    console.log("Mensaje: " + mensaje);
+    
+    alert("Formulario enviado"); // Ejemplo: muestra una alerta
+});
+
+
+
+
+
+
+
+
+

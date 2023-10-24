@@ -1,13 +1,3 @@
-
-
-body{
-  font: 15px/1.5 Arial, Helvetica,sans-serif;
-  padding:0;
-  margin:0;
-}
-
-
-
 /* Global */
 .container{
   width:80%;
@@ -20,9 +10,12 @@ ul{
   padding:0;
 }
 
+
+
+
 .button_1{
   height:38px;
-  background:#F08568;
+  background:#ad0c0c;
   border:0;
   padding-left: 20px;
   padding-right:20px;
@@ -31,7 +24,7 @@ ul{
 
 .dark{
   padding:15px;
-  background:#35424a;
+  background:#000000;
   color:#ffffff;
   margin-top:10px;
   margin-bottom:10px;
@@ -39,12 +32,21 @@ ul{
 
 /* Header **/
 header{
-  background:#35424a;
+  display: flex;
+  background:#000000;
   color:#ffffff;
   padding-top:30px;
   min-height:70px;
-  border-bottom:#F08568 3px solid;
+  border-bottom:#ad0c0c 3px solid;
 }
+
+.nav-list{
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+
 
 header a{
   color:#ffffff;
@@ -73,11 +75,11 @@ header nav{
 }
 
 header .highlight, header .current a{
-  color:#F08568;
+  color:#ad0c0c;
   font-weight:bold;
 }
 header a:active{
-  color:#F08568;
+  color:#ad0c0c;
 
 }
 
@@ -92,7 +94,7 @@ header a:hover{
   text-align:center;
   color:#ffffff;
   height: 600px;
-  background-image:url(../Imagenes/E4.png);
+  background-image:url(../Imagenes/E2.png);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -114,7 +116,7 @@ header a:hover{
 #newsletter{
   padding:15px;
   color:#ffffff;
-  background:#35424a
+  background:#000000
   
 }
 
@@ -138,11 +140,11 @@ text-shadow: 2px 2px black;
 
 #cajas{
   margin-top:20px;
-  background:#35424a;
+  background:#000000;
 }
 
 #cajas h2{
-  color:#F08568;
+  color:#ad0c0c;
 }
 
 #cajas p{
@@ -153,7 +155,7 @@ text-shadow: 2px 2px black;
 
 #boxes{
   margin-top:20px;
-  background:#35424a;
+  background:#000000;
 }
 
 #boxes1{
@@ -170,7 +172,7 @@ text-shadow: 2px 2px black;
 }
 
 #boxes1 .box1 h3{
-  color:#35424a;
+  color:#000000;
 }
 
 #boxes1 .box1 img{
@@ -188,7 +190,7 @@ text-shadow: 2px 2px black;
 }
 
 #boxes .box h3{
-  color:#F08568;
+  color:#ad0c0c;
 }
 
 #boxes .box img{
@@ -198,7 +200,7 @@ text-shadow: 2px 2px black;
 
 /* Vinculos */
 a {
-    color: #F08568;
+    color: #ad0c0c;
     text-decoration:none
 }
 
@@ -208,6 +210,167 @@ footer{
   padding: 20px;
   margin-top: 20px;
   color:#ffffff;
-  background-color: #F08568;
+  background-color: #ad0c0c;
   text-align: center;
 }
+
+
+
+
+
+
+#contacto {
+  background-color: #ad0c0c;
+  padding: 10px; 
+  max-width: 400px; 
+  margin: 0 auto; 
+}
+
+.form-group {
+  margin-bottom: 10px; 
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 14px; 
+}
+
+input[type="text"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px; 
+}
+
+textarea {
+  height: 100px; 
+}
+
+button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 14px; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+body{
+  font: 15px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+}
+
+.abrir-menu{
+  display: none;
+}
+.cerrar{
+  display: none;
+}
+
+
+@media screen and (max-width:950px ) {
+  .abrir-menu,
+  .cerrar{
+    display: block;
+    border:0 ;
+    font-size: 1.25rem;
+    background-color:transparent;
+    cursor: pointer;
+
+  }
+  .abrir-menu{
+    color: #000000;
+    
+  }
+  .abrir-menu{
+    color: white;
+    
+  }
+  .nav{
+    opacity: 0 ;
+    visibility: hidden;
+
+  }
+
+
+
+.nav{
+display: flex;
+flex-direction: column;
+align-items: end;
+gap: 1rem;
+position: absolute;
+top: 0;
+right: 0;
+background-color: #000000;
+padding:2rem;
+box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+}
+
+.nav.visible {
+  opacity: 1;
+  visibility:visible;
+
+}
+
+.nav-list{
+  flex-direction: column;
+  align-items: end;
+}
+.nav-list li a {
+  color: #ececec;
+}
+
+header .highlight, header .current a{
+  color:#ad0c0c;
+  font-weight:bold;
+}
+header a:active{
+  color:#ad0c0c;
+
+}
+#boxes .box {
+  width: 100%;
+  margin: 0;
+}
+
+/* Alinea el texto de las boxes al centro */
+#boxes .box p {
+  text-align: center;
+}
+
+/* Aumenta el tamaño de fuente de los títulos y párrafos en las boxes */
+#boxes .box h3,
+#boxes .box p {
+  font-size: 18px;
+}
+
+/* Alinea el texto de los párrafos en el showcase al centro */
+#showcase p {
+  text-align: center;
+}
+#showcase {
+  background-image: url(../Imagenes/iphone.png); 
+  background-size: cover; 
+  background-position: center center;
+}
+
+/* Alinea el texto del título y el párrafo en el centro */
+#showcase h1, #showcase p {
+  text-align: center;
+}
+}
+
+
